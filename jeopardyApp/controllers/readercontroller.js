@@ -2,18 +2,17 @@ angular
   .module('jeopardy')
   .controller('ReaderController', function($scope, $rootScope) {
 
-    $scope.addScore = function(input, answer, val){
-             if(input === answer){
-             $rootScope.score += val;
+    $scope.addScore = function(userAnswer, actualAnswer, value){
+             if(userAnswer === actualAnswer.toLowerCase().replace(/(<([^>]+)>)/ig,"").replace(/\\\//g,"")){
+             $rootScope.score += value * 2;
              } else {
-               $rootScope.score -= val;
+               $rootScope.score -= value * 2;
              }
            };
 
     $scope.disable = function(id){
         $('#this'+id).prop('disabled', true);
+          $('#' + id).modal('hide');
       };
-
-
-
+      
   });

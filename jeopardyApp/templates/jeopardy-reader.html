@@ -1,29 +1,28 @@
 
 
 <div>{{question.title}}</div>
+
 <div ng-repeat="data in question.clues | limitTo:5">
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{data.id}}" id="this{{data.id}}"><p>Question {{ data.value * 2 }}</p></button>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{data.id}}" id="this{{data.id}}">Question {{ data.value * 2 }}</button>
 
 
 <!-- THIS IS A BOOTSTRAP MODAL -->
 <div id="{{data.id}}" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">{{data.question}}</h4>
         <h2>{{data.answer}}</h2>
       </div>
-      <div class="modal-body {{data.id}}" >
-              <form role="form-group" ng-click="addScore(userAnswer, data.answer, data.value)">
-                  <input type="text" ng-model="userAnswer">
-              <button ng-click="disable(data.id)" class="btn btn-default" data-dismiss="modal">Submit</button>
-              </form>
-            </div>
+      <div class="modal-footer {{data.id}}">
+             <form role="form-group" ng-submit="addScore(userAnswer, data.answer, data.value)">
+             <input type="text" name="name" value="" ng-model="userAnswer" placeholder="Your Answer"/>
+             <button ng-click="disable(data.id)" type="submit" class="btn btn-default" btn-toggle="modal-body">Submit</button>
+             </form>
+      </div>
     </div>
-
   </div>
 </div>
+
 </div>
