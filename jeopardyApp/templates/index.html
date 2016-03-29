@@ -1,0 +1,8 @@
+<div class="row">
+  <h1>Jeopardy</h1>
+</div>
+<h6>Score:{{score}}</h6>
+
+<div class="col-md-2" ng-repeat="category in categories" class="">
+<jeopardy-reader question=category.data></jeopardy-reader>
+</div>
