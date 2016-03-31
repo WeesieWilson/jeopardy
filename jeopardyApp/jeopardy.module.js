@@ -7,7 +7,7 @@ angular
   .config(function($routeProvider) {
     $routeProvider
       .when('/jeopardy', {
-        templateUrl: '../jeopardyApp/templates/index.html',
+        templateUrl: 'jeopardyApp/templates/index.html',
         controller: 'HomeController'
       })
   });
