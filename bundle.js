@@ -70,7 +70,7 @@ angular
   .module('jeopardy')
   .directive('jeopardyReader', function(){
     return {
-      templateUrl: '../../jeopardyApp/templates/jeopardy-reader.html',
+      templateUrl: 'jeopardyApp/templates/jeopardy-reader.html',
       restrict: 'E',
       scope: {
         question: '=',},
@@ -94,7 +94,7 @@ angular
   .config(function($routeProvider) {
     $routeProvider
       .when('/jeopardy', {
-        templateUrl: '../jeopardyApp/templates/index.html',
+        templateUrl: 'jeopardyApp/templates/index.html',
         controller: 'HomeController'
       })
   });
