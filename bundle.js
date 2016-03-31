@@ -11,7 +11,6 @@ angular
     $routeProvider
       .when('/',{
         templateUrl: "main.html"
-
       })
       .when('/404',{
         template: '<h1> You messed up, loser </h1>'
@@ -98,6 +97,7 @@ angular
         controller: 'HomeController'
       })
   });
+  
 
 },{"angular":11,"angular-route":9}],7:[function(require,module,exports){
 angular

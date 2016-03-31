@@ -10,7 +10,6 @@ angular
     $routeProvider
       .when('/',{
         templateUrl: "main.html"
-
       })
       .when('/404',{
         template: '<h1> You messed up, loser </h1>'
