@@ -27,19 +27,21 @@ angular
 angular
   .module('jeopardy')
   .controller('HomeController', function($scope, ApiService, $rootScope) {
+  
+    $rootScope.score = 0;
 
-  $rootScope.score = 0;
 
     ApiService.getCategories()
         .then(function(catof1) {
-        });
+      });
 
     ApiService.sixCat()
         .then(function(data) {
         $scope.categories = data;
-        });
 
-    });
+      });
+
+});
 
 },{}],3:[function(require,module,exports){
 angular
@@ -103,6 +105,7 @@ angular
   .service('ApiService', function($http, $q){
     var url = 'http://jservice.io/api/category?id=';
     
+
 
     function getCategories(){
       var defer = $q.defer();

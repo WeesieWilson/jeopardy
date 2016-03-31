@@ -4,6 +4,7 @@ angular
     var url = 'http://jservice.io/api/category?id=';
     
 
+
     function getCategories(){
       var defer = $q.defer();
       var randomNumber = Math.floor(Math.random() * 1200);
