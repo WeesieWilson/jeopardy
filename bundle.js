@@ -7,18 +7,18 @@ angular
     'ngRoute',
     'jeopardy'
     ])
-  .config(function($routeProvider) {
-    $routeProvider
-      .when('/',{
-        templateUrl: "main.html"
-      })
-      .when('/404',{
-        template: '<h1> You messed up, loser </h1>'
-      })
-      .otherwise({
-         redirectTo: '/404'
-      })
-  })
+  // .config(function($routeProvider) {
+  //   $routeProvider
+  //     .when('/',{
+  //       templateUrl: "main.html"
+  //     })
+  //     .when('/404',{
+  //       template: '<h1> You messed up, loser </h1>'
+  //     })
+  //     .otherwise({
+  //        redirectTo: '/404'
+  //     })
+  // })
 
   require('./jeopardyApp');
 
@@ -92,12 +92,11 @@ angular
   .module('jeopardy',['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
-      .when('/jeopardy', {
-        templateUrl: 'jeopardyApp/templates/index.html',
+      .when('/', {
+        templateUrl: '../jeopardyApp/templates/index.html',
         controller: 'HomeController'
       })
   });
-  
 
 },{"angular":11,"angular-route":9}],7:[function(require,module,exports){
 angular

@@ -6,9 +6,8 @@ angular
   .module('jeopardy',['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
-      .when('/jeopardy', {
-        templateUrl: 'jeopardyApp/templates/index.html',
+      .when('/', {
+        templateUrl: '../jeopardyApp/templates/index.html',
         controller: 'HomeController'
       })
   });
-  
